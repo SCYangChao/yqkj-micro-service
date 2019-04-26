@@ -1,0 +1,48 @@
+server:
+  port: 4001
+
+spring:
+  application:
+    name: micro-server-config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://59.110.175.151:6666/root/yqkj-micro-config.git
+          username: yqkj_config
+          password: yqkj123456
+
+---
+spring:
+  profiles: dev
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    serviceUrl:
+      defaultZone: http://yqkj:yc@localhost:4000/eureka
+    registry-fetch-interval-seconds: 10
+
+---
+spring:
+  profiles: test
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://yqkj:yc@eureka:4000/eureka
+
+---
+spring:
+  profiles: prd
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://yqkj:yc@eureka:4000/eureka

@@ -10,7 +10,7 @@ import lombok.Data;
   *
  **/
 @Data
-public class YqkjException extends Throwable {
+public class YqkjException extends RuntimeException {
 
     public static    String SYS_EXCEPTION_CODE = "500";
 

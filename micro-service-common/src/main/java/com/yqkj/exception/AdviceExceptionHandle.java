@@ -5,7 +5,7 @@ import com.yqkj.utile.ResponseToole;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.oauth2.common.exceptions.InvalidGrantException;
-import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -66,10 +66,13 @@ public class AdviceExceptionHandle {
     public Object handleThrowable(Throwable e) {
 
         log.info("handleThrowable:{}" ,e);
-        if (e instanceof  ParamException){
+        if (e instanceof ParamException){
             return  this.handleParamException((ParamException)e);
-        }else if (e instanceof  BizException){
+        }else if (e instanceof BizException){
             return  this.handleBizException((BizException)e);
+        } else if (e instanceof MethodArgumentNotValidException) {
+            MethodArgumentNotValidException methodArgumentNotValidException =(MethodArgumentNotValidException)e;
+            return  ResponseToole.error( 501,methodArgumentNotValidException.getBindingResult().getFieldError().getDefaultMessage());
         }
 
         return  ResponseToole.error(500 ,"處理失敗");
