@@ -1,18 +1,15 @@
 server:
-  port: 4001
+  port: 9999
 
 spring:
   application:
-    name: micro-server-config
+    name: micro-server-gateway
+  could:
+    config:
+      enabled: false
   profiles:
     active: dev
-  cloud:
-    config:
-      server:
-        git:
-          uri: http://59.110.175.151:6666/root/yqkj-micro-config.git
-          username: yqkj_config
-          password: yqkj123456
+
 
 ---
 spring:

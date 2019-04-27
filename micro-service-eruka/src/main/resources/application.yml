@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: yqkj-micro-eruka
+  could:
+    config:
+      enabled: false
   security:
     basic:
       enabled: false # 关闭身份认证

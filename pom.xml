@@ -77,19 +77,6 @@
         </dependency>
     </dependencies>
 
-    <modules>
-        <module>micro-service-eruka</module>
-        <module>micro-service-common</module>
-        <module>micro-service-config</module>
-        <module>micro-service-auth</module>
-        <module>micro-service-gateway</module>
-        <module>micro-service-upms</module>
-        <module>micro-service-business</module>
-        <module>micro-service-task</module>
-        <module>micro-service-pay</module>
-
-    </modules>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -102,5 +89,18 @@
         </dependencies>
     </dependencyManagement>
 
+
+    <modules>
+        <module>micro-service-eruka</module>
+        <module>micro-service-common</module>
+        <module>micro-service-config</module>
+        <module>micro-service-auth</module>
+        <module>micro-service-gateway</module>
+        <module>micro-service-upms</module>
+        <module>micro-service-business</module>
+        <module>micro-service-task</module>
+        <module>micro-service-pay</module>
+
+    </modules>
 
 </project>
