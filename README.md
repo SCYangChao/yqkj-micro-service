@@ -24,7 +24,7 @@ yqkj-micro-service
 * 工具包：commons-lang3　3.7＋
 * JSON序列化：fastjson　1.2.46 
 * 数据库：mysql 5.0+
-* 数据库持久中间件：MyBatis－Ｐｌｕｓ
+* 数据库持久中间件：MyBatis－plus
 * 服务容器：Tomcat　
 * 依赖包管理：maven
 * 缓存：redis
