@@ -7,6 +7,7 @@
         <groupId>com.yqkj</groupId>
         <version>1.0.0.Standard.RELEASE</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <version>${sub.version}</version>
     <artifactId>micro-service-config</artifactId>
