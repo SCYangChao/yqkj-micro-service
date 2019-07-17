@@ -49,7 +49,6 @@ public class LogAop {
     @Around("LogAop()")
     private Object methodHandler(ProceedingJoinPoint pjp) throws  Throwable {
         long startTime = System.currentTimeMillis();
-
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
 
         String ip = null ,method = null,param = JSONObject.toJSONString(pjp.getArgs());

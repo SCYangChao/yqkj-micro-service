@@ -16,6 +16,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-security</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.ohcomeyes</groupId>
+            <artifactId>swagger-ui-layer</artifactId>
+            <version>1.2</version>
+        </dependency>
+
     </dependencies>
 
 
